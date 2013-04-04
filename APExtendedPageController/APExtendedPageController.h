@@ -11,9 +11,9 @@
 
 @class APExtendedPageController;
 @protocol APExtendedPageControllerDelegate <NSObject>
-
-- (UIView *)extendedPageController: (APExtendedPageController *)extendedPageController viewAtIndex: (NSInteger)index;
-
+#warning AP: You must implement this method!
+- (UIView *)extendedPageController: (APExtendedPageController *)extendedPageController
+                       viewAtIndex: (NSInteger)index;
 @end
 
 
@@ -34,6 +34,8 @@
 
 @property (nonatomic) BOOL displayBorder;
 
-- (id)initWithFrame:(CGRect)frame mainView: (UIView *)mainView extendedPageControllerDelegate:(id)extendedPageControllerDelegate;
+-               (id)initWithFrame: (CGRect)frame
+                         mainView: (UIView *)mainView
+   extendedPageControllerDelegate: (id)extendedPageControllerDelegate;
 
 @end

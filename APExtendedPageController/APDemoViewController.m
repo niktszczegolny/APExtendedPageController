@@ -37,7 +37,7 @@
                        viewAtIndex:(NSInteger)index
 {
     
-    if (index >= 0) {
+    if (index >= 0 && index <= 10) {
         UIView * view = [[UIView alloc] initWithFrame:extendedPageController.frame];
         view.backgroundColor = [UIColor colorWithRed:randomFloat green:randomFloat blue:randomFloat alpha:1.];
         
