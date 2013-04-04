@@ -198,14 +198,17 @@
     
     if (_leftView) {
         _leftView.frame = [self _frameForViewWithIndex:indexLeft];
+        _leftView.layer.borderColor = [UIColor colorWithWhite:1. alpha:0.].CGColor;
         [self addSubview:_leftView];
     }
     if (_mainView) {
         _mainView.frame = [self _frameForViewWithIndex:(_leftView ? indexCenter : indexLeft)];
+        _mainView.layer.borderColor = [UIColor colorWithWhite:1. alpha:0.].CGColor;
         [self addSubview:_mainView];
     }
     if (_rightView) {
         _rightView.frame = [self _frameForViewWithIndex:(_leftView ? indexRight : indexCenter)];
+        _rightView.layer.borderColor = [UIColor colorWithWhite:1. alpha:0.].CGColor;
         [self addSubview:_rightView];
     }
     
@@ -231,7 +234,6 @@
 - (void)_resetView: (UIView *)view
    withScaleFactor: (float)scaleFactor
 {
-    
     view.transform = CGAffineTransformMakeScale(scaleFactor, scaleFactor);
     
     if (_displayBorder) {
